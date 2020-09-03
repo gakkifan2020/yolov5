@@ -11,13 +11,13 @@ import argparse
 from Format import VOC, COCO, UDACITY, KITTI, YOLO
 
 parser = argparse.ArgumentParser(description='label Converting example.')
-parser.add_argument('--datasets', type=str, help='type of datasets')
-parser.add_argument('--img_path', type=str, help='directory of image folder')
-parser.add_argument('--label', type=str, help='directory of label folder or label file path')
-parser.add_argument('--convert_output_path', type=str, help='directory of label folder')
-parser.add_argument('--img_type', type=str, help='type of image')
+parser.add_argument('--datasets', type=str, default="VOC", help='type of datasets')
+parser.add_argument('--img_path', type=str, default="D:\\DL\\workSpace\\pycharm\\pytorch\\yolov5\\data\\VOC\\VOCdevkit\\VOC2012\\JPEGImages", help='directory of image folder')
+parser.add_argument('--label', type=str, default="D:\\DL\\workSpace\\pycharm\\pytorch\\yolov5\\data\\VOC\\VOCdevkit\\VOC2012\\Annotations", help='directory of label folder or label file path')
+parser.add_argument('--convert_output_path', type=str, default="D:\DL\workSpace\pycharm\pytorch\yolov5\convert2Yolo-fixed\output", help='directory of label folder')
+parser.add_argument('--img_type', type=str, default=".jpg", help='type of image')
 parser.add_argument('--manipast_path', type=str, help='directory of manipast file', default="./")
-parser.add_argument('--cls_list_file', type=str, help='directory of *.names file', default="./")
+parser.add_argument('--cls_list_file', type=str, default="D:\\DL\\workSpace\\pycharm\\pytorch\\yolov5\\data\\VOC\\voc.names", help='directory of *.names file')
 
 
 args = parser.parse_args()

@@ -384,7 +384,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--weights', type=str, default='yolov5s.pt', help='initial weights path')
     parser.add_argument('--cfg', type=str, default='./models/yolov5s.yaml', help='model.yaml path')
-    parser.add_argument('--data', type=str, default='data/voc.yaml', help='data.yaml path')
+    parser.add_argument('--data', type=str, default='data/voc2012.yaml', help='data.yaml path')
     parser.add_argument('--hyp', type=str, default='data/hyp.scratch.yaml', help='hyperparameters path')
     parser.add_argument('--epochs', type=int, default=300)
     parser.add_argument('--batch-size', type=int, default=16, help='total batch size for all GPUs')
