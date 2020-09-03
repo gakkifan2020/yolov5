@@ -31,6 +31,8 @@ from utils.google_utils import attempt_download
 from utils.torch_utils import init_seeds, ModelEMA, select_device, intersect_dicts
 
 logger = logging.getLogger(__name__)
+import os
+os.environ['CUDA_VISIBLE_DEVICES']='0'
 
 
 def train(hyp, opt, device, tb_writer=None):
@@ -383,8 +385,8 @@ def train(hyp, opt, device, tb_writer=None):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--weights', type=str, default='yolov5s.pt', help='initial weights path')
-    parser.add_argument('--cfg', type=str, default='./models/yolov5s.yaml', help='model.yaml path')
-    parser.add_argument('--data', type=str, default='data/voc2012.yaml', help='data.yaml path')
+    parser.add_argument('--cfg', type=str, default='./models/yolov5l.yaml', help='model.yaml path')
+    parser.add_argument('--data', type=str, default='data/coco128.yaml', help='data.yaml path')
     parser.add_argument('--hyp', type=str, default='data/hyp.scratch.yaml', help='hyperparameters path')
     parser.add_argument('--epochs', type=int, default=300)
     parser.add_argument('--batch-size', type=int, default=16, help='total batch size for all GPUs')

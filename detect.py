@@ -148,9 +148,9 @@ def detect(save_img=False):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weights', nargs='+', type=str, default='D:\\DL\\workSpace\\pycharm\\pytorch\\yolov5\\runs\\exp1\\weights\\best.pt', help='model.pt path(s)')
-    parser.add_argument('--source', type=str, default='inference/images', help='source')  # file/folder, 0 for webcam
-    parser.add_argument('--output', type=str, default='inference/output', help='output folder')  # output folder
+    parser.add_argument('--weights', nargs='+', type=str, default='/home/zhangwei/NewDisk/zhangwei/DL/pytorch/yolov5/runs/exp5/weights/best.pt', help='model.pt path(s)')
+    parser.add_argument('--source', type=str, default='inference/video/2.mp4', help='source')  # inference/images, 0 for webcam
+    parser.add_argument('--output', type=str, default='inference/output_1', help='output folder')  # output folder
     parser.add_argument('--img-size', type=int, default=640, help='inference size (pixels)')
     parser.add_argument('--conf-thres', type=float, default=0.4, help='object confidence threshold')
     parser.add_argument('--iou-thres', type=float, default=0.5, help='IOU threshold for NMS')
