@@ -1,0 +1,7 @@
+1 coco_json_to_voc_xml.py 文件 , 把 coco 的 json 转化为 和每个图一一对应的 xml 文件
+2 分别得到了 train 的 xml 和 val 的 xml 之后，我们进一步使用脚本转化 xml 为 txt ，其中分为两部分
+   1) 将所有 xml 的路径取出来放到 train_all.txt 中
+      xml_to_txt.py
+   2) 将得到的文件一起整理好，生成每个 xml 对应的 txt 标签
+      这里也是先执行 train 然后修改 train 为 val 继续执行，就是打###的三个部分的路径
+3 最后将生成的 txt 标签放到 coco128 的 labels 的 train2017 和 val2017 下面就可以开始训练了
